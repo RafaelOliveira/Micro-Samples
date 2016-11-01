@@ -1,4 +1,4 @@
-let project = new Project('Sprites');
+let project = new Project('Game');
 
 project.addAssets('Assets');
 project.addSources('Sources');
