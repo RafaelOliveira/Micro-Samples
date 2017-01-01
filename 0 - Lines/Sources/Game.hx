@@ -17,15 +17,13 @@ class Game
 	var t = 0;
 	var points:Array<Point>;
 	
-	public function new() {}
-	
-	public function init()
-	{		
+	public function new() 
+	{
 		points = new Array<Point>();
 
 		for (i in 0...(max_points))
 			points.push({ x: int(rnd(127)), y: int(rnd(127)), dirX: getRandomDir(), dirY: getRandomDir() });
-	}
+	}	
 	
 	function getRandomDir()
 	{

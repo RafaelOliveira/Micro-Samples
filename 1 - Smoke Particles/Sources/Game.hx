@@ -24,12 +24,10 @@ class Game
 {	
 	var particleList:Array<Particle>;
 
-	public function new() {}
-	
-	public function init()
-	{		
+	public function new()
+	{
 		particleList = new Array<Particle>();
-	}
+	}	
 
 	function createParticle(x:Float, y:Float, initSize:Float, col:Int):Void
 	{

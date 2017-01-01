@@ -10,11 +10,13 @@ class Game
 {
 	var walls:Array<Rect>;
 	var coins:Array<Vector2i>;
-	var player:Rect;		
+	var player:Rect;
+	var delta:Vector2;		
 
 	public function new() 
 	{
-			player = new Rect(4, 90, 8, 8);			
+			player = new Rect(4, 90, 8, 8);
+			delta = new Vector2();			
 
 			walls = new Array<Rect>();
 			walls.push(new Rect(-18, 113, 8, 47));		walls[0].id = SColor.picoColor3; 
@@ -47,19 +49,21 @@ class Game
 
 	public function update()
 	{
-		var dx = 0.0;
-		var dy = 0.0;
+		delta.x = 0;
+		delta.y = 0;
 
 		if (btn(0)) 
-			dx = -1;
+			delta.x = -1;
 		else if (btn(1))
-			dx = 1;
+			delta.x = 1;
 		if (btn(2)) 
-			dy = -1;
+			delta.y = -1;
 		else if (btn(3)) 
-			dy = 1;
+			delta.y = 1;
 		
-		moveRectBy(player, dx, dy, walls);		
+		moveBy(player.x, player.y, player.width, player.height, delta, walls);		
+		player.x += delta.x;
+		player.y += delta.y;				
 
 		// pick the coins
 		for (coin in coins)

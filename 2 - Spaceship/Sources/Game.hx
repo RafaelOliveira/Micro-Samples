@@ -30,10 +30,8 @@ class Game
 	var stars:Array<Star>;
 	var t:Int;
 
-	public function new() {}
-	
-	public function init()
-	{	
+	public function new() 
+	{
 		setSprite(kha.Assets.images.sprites);
 
 		ship = {
@@ -55,7 +53,7 @@ class Game
 				opacity: rnd(1) + 0.1
 			});
 		}
-	}			
+	}				
 	
 	public function update() 
 	{	

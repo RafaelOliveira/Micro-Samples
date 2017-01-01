@@ -6,13 +6,9 @@ class Main
 {
 	public static function main() 
 	{
-		var game = new Game();
-
-		new Micro({			
-			fps: 30, 
-			init: game.init, 
-			update: game.update, 
-			draw: game.draw
+		new Micro({ title: 'Smoke Particles', fps: 30 }, function() { 
+			var game = new Game();
+			Micro.start(game.update, game.draw);
 		});		
 	}	
 }
