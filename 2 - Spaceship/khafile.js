@@ -1,4 +1,4 @@
-let project = new Project('Game');
+let project = new Project('Spaceship');
 
 project.addAssets('Assets');
 project.addSources('Sources');

@@ -16,6 +16,10 @@ typedef Particle = {
 	ddy:Float
 };
 
+/**
+ * This code is from Picozine #1 page 39
+ * https://sectordub.itch.io/pico-8-fanzine-1
+ */
 class Game
 {	
 	var particleList:Array<Particle>;

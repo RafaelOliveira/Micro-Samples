@@ -8,13 +8,11 @@ class Main
 	{
 		var game = new Game();
 
-		new Micro({ 
-			width: 512, height: 512, 
-			backbufferWidth: 128, backbufferHeight: 128,
-			fps: 30, 
+		new Micro({
+			fps: 30,
 			init: game.init, 
 			update: game.update, 
 			draw: game.draw
-		});		
-	}	
+		});
+	}
 }

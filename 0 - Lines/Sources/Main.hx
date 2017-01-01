@@ -8,9 +8,7 @@ class Main
 	{
 		var game = new Game();
 
-		new Micro({ 
-			width: 512, height: 512, 
-			backbufferWidth: 128, backbufferHeight: 128, 
+		new Micro({			 
 			init: game.init, 
 			update: game.update, 
 			draw: game.draw

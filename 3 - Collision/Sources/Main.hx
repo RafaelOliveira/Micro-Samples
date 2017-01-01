@@ -8,11 +8,9 @@ class Main
 	{
 		var game = new Game();
 
-		new Micro({			
-			fps: 30, 
-			init: game.init, 
+		new Micro({
 			update: game.update, 
 			draw: game.draw
-		});		
-	}	
-}
+		});
+	}
+}	
